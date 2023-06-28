@@ -7,7 +7,7 @@ import {
   faVideoSlash,
   faMicrophoneSlash,
 } from "@fortawesome/free-solid-svg-icons";
-import ReactTooltip from "react-tooltip";
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 import "./MeetingFooter.css";
 const MeetingFooter = (props) => {
   const [streamState, setStreamState] = useState({

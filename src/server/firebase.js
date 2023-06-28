@@ -1,8 +1,9 @@
-import firebase from "firebase";
+import firebase from "firebase/compat/app";
+import "firebase/compat/database";
 
 var firebaseConfig = {
-  apiKey: "", // Add API Key
-  databaseURL:"" // Add databaseURL
+  apiKey: " AIzaSyDuuRKPy586FF4TCGwwsNvZ8VTryCwkYjE", // Add API Key
+  databaseURL:"https://meet-587b5-default-rtdb.europe-west1.firebasedatabase.app/" // Add databaseURL
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -22,4 +23,5 @@ if (roomId) {
   window.history.replaceState(null, "Meet", "?id=" + firepadRef.key);
 }
 
-export default firepadRef;
+export { firepadRef as default };
+
